@@ -1,0 +1,26 @@
+#nav{
+  display: flex;
+  flex-direction: column;
+  backgroubd-color: $bgcColor;
+
+}
+#menuIcone{
+  justify-content: flex-end;
+
+  img{
+    width: 100px;
+  }
+}
+
+#menuText{
+  font-size: 2em;
+
+  a{
+    color: $colorMenuText;
+    display: inline-block;
+    width: 100%;
+    background-color:$bgcMenu;
+    text-align: center;
+
+  }
+}
