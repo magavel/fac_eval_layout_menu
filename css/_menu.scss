@@ -1,11 +1,14 @@
 #nav{
   display: flex;
   flex-direction: column;
-  backgroubd-color: $bgcColor;
+  //backgroubd-color: $bgcColor;
 
 }
 #menuIcone{
   justify-content: flex-end;
+  &:a{
+    transform: rotate(45deg); /* Équivalent à rotateZ(45deg) */
+  }
 
   img{
     width: 100px;
@@ -14,13 +17,22 @@
 
 #menuText{
   font-size: 2em;
+  background-color:$bgcMenu;
 
   a{
     color: $colorMenuText;
     display: inline-block;
     width: 100%;
-    background-color:$bgcMenu;
     text-align: center;
+    height: 1.5em;
+    line-height: 1.5em;
+    &:hover{
+      background-color: darken($bgcMenu, 20%);
+    }
+    img{
+      width: 50px;
+      visibility: hidden;
+    }
 
   }
 }

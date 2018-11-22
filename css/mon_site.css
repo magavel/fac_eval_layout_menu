@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 ul,
@@ -6,41 +7,14 @@ li {
   padding: 0;
 }
 
-#nav {
-  display: flex;
-  flex-direction: column;
-  backgroubd-color: red;
-}
-
-#menuIcone {
-  justify-content: flex-end;
-}
-
-#menuIcone img {
-  width: 100px;
-}
-
-#menuText {
-  font-size: 2em;
-}
-
-#menuText a {
-  color: #111111;
-  display: inline-block;
-  width: 100%;
-  background-color: #ffdead;
-  text-align: center;
-}
-
 body {
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .page {
-  width: 100%;
-  height: 100px;
-  background-color: red;
+  margin: auto;
+  background-color: #ffa625;
 }
 
 .page h1 {
@@ -49,6 +23,68 @@ body {
 
 h1 {
   text-align: center;
+  line-height: 100px;
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+}
+
+#menuIcone {
+  justify-content: flex-end;
+}
+
+#menuIcone:a {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* Équivalent à rotateZ(45deg) */
+}
+
+#menuIcone img {
+  width: 100px;
+}
+
+#menuText {
+  font-size: 2em;
+  background-color: #ffdead;
+}
+
+#menuText a {
+  color: #111111;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+#menuText a:hover {
+  background-color: #ffb547;
+}
+
+#menuText a img {
+  width: 50px;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  #menuIcone {
+    display: none;
+  }
+  #menuText {
+    width: 100%;
+  }
+  #menuText ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #menuText ul li {
+    list-style: none;
+  }
+  #menuText ul img {
+    visibility: visible;
+  }
 }
 
 /*# sourceMappingURL=mon_site.css.map */
