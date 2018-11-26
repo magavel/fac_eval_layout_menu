@@ -2,9 +2,15 @@
 html,
 body,
 ul,
-li {
+li,
+svg {
   margin: 0;
   padding: 0;
+}
+
+svg {
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -35,14 +41,19 @@ h1 {
   justify-content: flex-end;
 }
 
-#menuIcone:a {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  /* Équivalent à rotateZ(45deg) */
-}
-
-#menuIcone img {
-  width: 100px;
+.Icon {
+  margin: 0;
+  padding: 0;
+  /* Permet de redimensionner en changeant la font-size de l’icône */
+  width: 1em;
+  height: 1em;
+  /* Bel alignement visuel des icônes avec le texte */
+  vertical-align: -0.15em;
+  /* fill par défaut = valeur de la propriété couleur de son élément parent */
+  fill: currentColor;
+  /* Les paths et les strokes qui dépassent de la viewBox peuvent apparaître dans IE.
+     Si vous utilisez normalize.css, inutile de l’ajouter. */
+  overflow: hidden;
 }
 
 #menuText {
@@ -61,10 +72,15 @@ h1 {
 
 #menuText a:hover {
   background-color: #ffb547;
+  color: red;
 }
 
-#menuText a img {
+#menuText a .texteMenu {
   width: 50px;
+  visibility: visible;
+}
+
+#menuText a .Icon {
   visibility: hidden;
 }
 
@@ -82,7 +98,10 @@ h1 {
   #menuText ul li {
     list-style: none;
   }
-  #menuText ul img {
+  #menuText ul .texteMenu {
+    visibility: visible;
+  }
+  #menuText ul .Icon {
     visibility: visible;
   }
 }

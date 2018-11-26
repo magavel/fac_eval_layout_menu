@@ -6,13 +6,21 @@
 }
 #menuIcone{
   justify-content: flex-end;
-  &:a{
-    transform: rotate(45deg); /* Équivalent à rotateZ(45deg) */
-  }
+}
 
-  img{
-    width: 100px;
-  }
+
+.Icon {
+  margin: 0;
+  padding: 0;
+  /* Permet de redimensionner en changeant la font-size de l’icône */
+  width: 1em; height: 1em;
+  /* Bel alignement visuel des icônes avec le texte */
+  vertical-align: -0.15em;
+  /* fill par défaut = valeur de la propriété couleur de son élément parent */
+  fill: currentColor;
+  /* Les paths et les strokes qui dépassent de la viewBox peuvent apparaître dans IE.
+     Si vous utilisez normalize.css, inutile de l’ajouter. */
+  overflow: hidden;
 }
 
 #menuText{
@@ -28,9 +36,13 @@
     line-height: 1.5em;
     &:hover{
       background-color: darken($bgcMenu, 20%);
+      color: red;
     }
-    img{
+    .texteMenu{
       width: 50px;
+      visibility: visible;
+    }
+    .Icon{
       visibility: hidden;
     }
 
