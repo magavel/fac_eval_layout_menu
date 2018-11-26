@@ -14,3 +14,6 @@
             </ul>
         </div>
 
+<?php include('svg/cerise.svg') ?>
+
+
